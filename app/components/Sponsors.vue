@@ -14,7 +14,13 @@ const contributors = Array.from({ length: 18 }, (_, index) => ({
   logo: "https://i.pravatar.cc/" + 200 + index,
 }));
 
-const sponsors = [
+const sponsors: {
+  label: string;
+  items: {
+    name: string;
+    logo: string;
+  }[];
+}[] = [
   {
     label: "Gold Sponsors",
     items: [],

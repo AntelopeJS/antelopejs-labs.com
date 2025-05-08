@@ -1,0 +1,74 @@
+title: "Better than multiple tools"
+title_suffix: "an ecosystem"
+description: "Our comprehensive ecosystem is designed to simplify your development experience."
+
+features:
+  title: An open-source way to
+  title_suffix: transform your development workflow
+  description: "AntelopeJS is the first building block of a complete, open-source development ecosystem. Start today with a lightweight, modular framework. Coming soon: a headless CMS (late 2025) and an optional cloud service (early 2026) — all designed to work seamlessly together."
+  items:
+    - icon: i-antelope:opensource
+      title: Open Source
+      description: Full freedom, open code, active community. A solid foundation for fast-moving teams and ambitious projects.
+    - icon: i-antelope:ecosystem
+      title: Streamlined Workflow
+      description: Build, test, and deploy with ease. Designed for fast iterations, clean integrations, and reliable results.
+    - icon: i-antelope:scalability
+      title: Scalability focused
+      description: Grow with confidence — whether you're launching a startup or scaling to global demand.
+
+ecosystem:
+  title: Antelopejs Environment
+  description: "Host your projects on your own servers for full control and total independence — or, soon, choose our turnkey cloud solution for fast deployment and effortless scaling."
+
+solutions:
+  title: "Tailored to "
+  title_suffix: "real-world development"
+  items:
+    - title: "Framework"
+      description: "The ultra-modular Node.js solution for a scalable microservices architecture. Develop backend solutions more easily, more quickly."
+      light_image: "/images/light/framework.svg"
+      dark_image: "/images/dark/framework.svg"
+      features:
+        - icon: i-mingcute:arrows-down-fill
+          description: Open source and free, forever
+        - icon: i-mingcute:arrows-down-fill
+          description: Licensed under Apache 2.0, free to use
+      links:
+        - icon: i-ph-book
+          label: More information
+          to: https://antelopejs.com/
+          variant: "outline"
+    - title: "CMS Builder"
+      description: "A flexible content management system to create custom dashboards, connect to any database, and use a built-in No-Code module — with a cloud-hosted option coming soon."
+      light_image: "/images/light/cms-builder.svg"
+      dark_image: "/images/dark/cms-builder.svg"
+      links:
+        - icon: i-ph-book
+          label: Coming soon
+          variant: "outline"
+    - title: "Cloud"
+      description: "A turnkey hosting service to deploy and manage your applications — no servers to maintain, no infrastructure to worry about."
+      light_image: "/images/light/cloud.svg"
+      dark_image: "/images/dark/cloud.svg"
+      links:
+        - icon: i-ph-book
+          label: Coming soon
+          variant: "outline"
+
+sponsors:
+  title: "Sponsors"
+  description: "100% of donations go directly to rewarding contributors to our open-source projects. This support helps them complete their work with focus and precision."
+  links:
+    - label: Become a sponsor
+      to: https://github.com/sponsors/AntelopeJS
+      variant: "outline"
+
+cta:
+  title: "Help grow AntelopeJS"
+  title_suffix: "and its community"
+  description: "Contribute to the features you care about — by sharing ideas, submitting code, or reporting issues."
+  links:
+    - icon: i-simple-icons-github
+      label: Github
+      to: https://github.com/AntelopeJS

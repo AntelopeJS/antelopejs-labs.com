@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "antelopejs-com",
+      "name": "antelopejs-labs.com",
       "script": "pnpm start",
       "watch": false,
       "exec_mode": "fork"

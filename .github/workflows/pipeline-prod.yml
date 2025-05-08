@@ -27,7 +27,7 @@ jobs:
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh
 
-            cd antelope/antelopejs.com
+            cd antelope/antelopejs-labs.com
 
             git config pull.rebase false
             git checkout main

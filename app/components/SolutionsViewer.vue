@@ -40,57 +40,57 @@ const activeView = ref(0);
         :key="`view-${index}`"
         :class="[
           activeView === index ? 'bg-primary-500/20 flex-2' : 'flex-1 bg-(--ui-bg-muted)',
-          'relative cursor-pointer overflow-hidden rounded-xl px-5 py-8 transition-all lg:h-[580px]',
+          'cursor-pointer rounded-xl px-5 py-8 transition-all lg:flex lg:h-[600px] lg:flex-col lg:justify-between',
         ]"
         @click="activeView = index"
       >
-        <h2 class="font-secondary pb-4 text-3xl font-bold text-(--ui-primary)">{{ item.title }}</h2>
+        <div>
+          <h2 class="font-secondary pb-4 text-3xl font-bold text-(--ui-primary)">
+            {{ item.title }}
+          </h2>
 
-        <div class="overflow-hidden transition-none">
-          <motion.div
-            v-if="activeView === index"
-            class="mb-5 text-base text-balance text-(--ui-text-muted)"
-            :initial="{ opacity: 0, y: 20 }"
-            :animate="{ opacity: 1, y: 0 }"
-            :transition="{ duration: 0.3 }"
-          >
-            <p class="mb-4">
-              {{ item.description }}
-            </p>
+          <div class="overflow-hidden transition-none">
+            <motion.div
+              v-if="activeView === index"
+              class="mb-5 text-base text-balance text-(--ui-text-muted)"
+              :initial="{ opacity: 0, y: 20 }"
+              :animate="{ opacity: 1, y: 0 }"
+            >
+              <p class="mb-4">
+                {{ item.description }}
+              </p>
 
-            <UPageFeature
-              v-for="(feature, featureIndex) in item.features"
-              :key="`feature-${featureIndex}`"
-              :description="feature.description"
-              :icon="feature.icon"
-            />
-
-            <div class="flex gap-4 pt-4">
-              <UButton
-                v-for="(link, linkIndex) in item.links"
-                :key="`link-${linkIndex}`"
-                :to="link.to"
-                :icon="link.icon"
-                :label="link.label"
-                :color="link.color"
-                :variant="link.variant"
-                :target="link.target"
+              <UPageFeature
+                v-for="(feature, featureIndex) in item.features"
+                :key="`feature-${featureIndex}`"
+                :description="feature.description"
+                :icon="feature.icon"
               />
-            </div>
-          </motion.div>
+
+              <div class="flex gap-4 pt-4">
+                <UButton
+                  v-for="(link, linkIndex) in item.links"
+                  :key="`link-${linkIndex}`"
+                  :to="link.to"
+                  :icon="link.icon"
+                  :label="link.label"
+                  :color="link.color"
+                  :variant="link.variant"
+                  :target="link.target"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
 
-        <UColorModeImage
-          :light="item.light_image"
-          :dark="item.dark_image"
-          :alt="item.title"
-          :class="[
-            activeView === index
-              ? 'w-full'
-              : 'absolute top-2 right-4 aspect-16/9 h-auto max-h-[80%] w-52 max-w-none object-contain lg:top-[unset] lg:bottom-4 lg:left-4 lg:w-[600px]',
-            'rounded-lg transition-none',
-          ]"
-        />
+        <div class="relative mt-auto h-full w-full lg:w-auto">
+          <UColorModeImage
+            :light="item.light_image"
+            :dark="item.dark_image"
+            :alt="item.title"
+            class="aspect-[16/9] w-full max-w-md lg:absolute lg:bottom-0 lg:left-0 lg:h-72 lg:max-w-none lg:object-cover lg:object-left-bottom"
+          />
+        </div>
       </motion.article>
     </div>
   </UPageSection>
